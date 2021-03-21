@@ -26,7 +26,7 @@ ws.addEventListener("message", ({ data }) => {
   const parseData = JSON.parse(data);
   if (parseData.event == "sending_message") {
     let liInnerhtml = `<li class="user-message">
-    <span class="user-message-info">${parseData.payload.name}  ${parseData.payload.date}</span>
+    <span class="user-message-info">${parseData.payload.name} at ${parseData.payload.date}</span>
     <span class="user-message-text">${parseData.payload.message}</span>
     </li>`;
     let li = document.createElement("li");
@@ -57,7 +57,7 @@ sendBtn.addEventListener("click", (e) => {
       })
     );
     let liInnerhtml = `<li class="your-message">
-    <span class="your-message-info">you  ${date.getHours()}.${date.getMinutes()}</span>
+    <span class="your-message-info">you  at ${date.getHours()}.${date.getMinutes()}</span>
     <span class="your-message-text">${messageValue}</span>
     </li>`;
     let li = document.createElement("li");
