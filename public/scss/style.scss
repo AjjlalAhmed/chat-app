@@ -1,0 +1,108 @@
+* {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+  @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: #252837;
+  position: relative;
+  #messages {
+    position: relative;
+    header {
+        position: fixed;
+        width: 100%;
+      .logo {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 10px;
+        background: #7a7aff;
+        color: #fff;
+        font-weight: 300;
+      }
+    }
+    ul {
+      max-width: 1000px;
+      margin: 0px auto;
+      margin-top: 100px;
+      margin-bottom: 50px;
+      
+      li {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        justify-content: space-evenly;
+      }
+      .connected {
+        color: #fff;
+        background: #323544;
+        text-transform: capitalize;
+        padding: 10px;
+        display: table;
+        margin: 10px auto;
+        border-radius: 3px;
+      }
+      .user-message {
+        align-items: flex-start;
+        &-info {
+          color: #f1f1f1;
+          font-size: 0.8rem;
+          padding:  5px;
+          text-transform: capitalize;
+        }
+        &-text {
+          background: #323544;
+          color: #fff;
+          padding: 10px;
+          word-wrap: break-word;
+          border-radius: 3px;
+          width: 80%;
+        }
+      }
+      .your-message {
+        align-items: flex-end;
+        &-info {
+          color: #f1f1f1;
+          font-size: 0.8rem;
+          padding:  5px;
+          text-transform: capitalize;
+        }
+        &-text {
+          background: #7a7aff;
+          color: #fff;
+          padding: 10px;
+          word-wrap: break-word;
+          border-radius: 3px;
+          width: 80%;
+        }
+      }
+    }
+  }
+  #send-message {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+    input {
+      width: 100%;
+      border: 0px;
+      text-indent: 10px;
+    }
+    .send-btn {
+      padding: 10px 30px;
+      border: 0;
+      background: #7a7aff;
+      color: #fff;
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
